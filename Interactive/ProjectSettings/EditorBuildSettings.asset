@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Basket Ball court.unity
+    guid: d9e76bb19ca46c94684584f0b2722fa7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9f4d210f07fb7dd4694445d21a26e81a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 06b9c2543c739354c8db1edbbcba5ff0, type: 2}
