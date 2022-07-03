@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class PlayDance : MonoBehaviour
 {
-    Animator cheerGirl;
+    [SerializeField] private Animator myDance = null;
+
+    [SerializeField] private bool idleAnim = false;
+    [SerializeField] private bool danceAnim = false;
+
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("basketball"))
+        {
+            if (idleAnim)
+            {
+                myDance.Play("cheer_idle", 0, 0.0f);
+                //gameObject.SetActive(false);
+            }
+            else if (danceAnim)
+            {
+                myDance.Play("cheer_dance", 0, 0.0f);
+                //gameObject.SetActive(false);
+            }
 
-        cheerGirl.SetBool("playDance", true);
-
-    }
-
-        // Start is called before the first frame update
-        void Start()
-    {
-        cheerGirl = this.transform.parent.GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }
